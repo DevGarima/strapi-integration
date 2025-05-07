@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_testimonial_sections",
+  "info": {
+    "displayName": "TestimonialSection"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "blocks"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

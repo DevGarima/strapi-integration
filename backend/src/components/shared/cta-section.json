@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_cta_sections",
+  "info": {
+    "displayName": "CTASection"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "text"
+    }
+  }
+}

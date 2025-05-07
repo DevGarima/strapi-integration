@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": "Write about yourself and the content you create"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider"
+      ]
+    },
+    "home": {
+      "displayName": "Home",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.home"
+    },
+    "FeatureSection": {
+      "displayName": "FeatureSection",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-section"
+    },
+    "TestimonialSection": {
+      "displayName": "TestimonialSection",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.testimonial-section"
+    },
+    "CTASection": {
+      "displayName": "CTASection",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta-section"
+    }
+  }
+}
