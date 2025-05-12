@@ -16,9 +16,8 @@ async function fetchHomePage() {
 
 export default async function HomePage() {
   const homepage = await fetchHomePage() || [];
-  const { sections = []} = homepage || {};
 
-  const finalSections = sections.reduce((acc, item) => {
+  const finalSections = homepage.reduce((acc, item) => {
     const componentType = item.__component;
       const existingGroup = acc.find((group) => group.__component === componentType);
   
@@ -37,7 +36,7 @@ export default async function HomePage() {
   return (
     <main>
       {finalSections?.map((component, index) => (
-        <DynamicComponent key={index} component={component?.items} componentName={component?.__component}  />
+        <DynamicComponent key={index} component={component?.items} componentName={component?.__component} />
       ))}
     </main>
   );

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_promotions",
+  "info": {
+    "displayName": "Promotion",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

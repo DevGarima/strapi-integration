@@ -18,7 +18,8 @@
         "shared.feature-section",
         "shared.slider",
         "shared.testimonial-section",
-        "shared.cta-section"
+        "shared.cta-section",
+        "shared.promotion"
       ]
     }
   }

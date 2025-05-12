@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "header_footers",
+  "info": {
+    "singularName": "header-footer",
+    "pluralName": "header-footers",
+    "displayName": "HeaderFooter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "headerLinks": {
+      "type": "json"
+    },
+    "footerLinks": {
+      "type": "json"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

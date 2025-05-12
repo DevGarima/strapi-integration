@@ -63,7 +63,7 @@ export default function Products() {
                     <p
                       key={`product-description-${index}`}
                       dangerouslySetInnerHTML={{
-                        __html: shopifyProduct.body_html || '',
+                        __html: shopifyProduct?.body_html || '',
                       }}
                     ></p>
                     <div className="flex items-center flex-wrap">

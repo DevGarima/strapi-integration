@@ -30,10 +30,10 @@ const articles = await getArticles()
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                     {article?.title}
                   </h1>
-                  <p
+                  {article?.description && (<p
                     className="leading-relaxed mb-3"
                     dangerouslySetInnerHTML={{ __html: article?.description }}
-                  ></p>
+                  ></p>)}
                   <div className="flex items-center flex-wrap">
                     <Link href="/" className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
                       Learn More

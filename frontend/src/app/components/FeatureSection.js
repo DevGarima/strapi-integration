@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function FeatureSection(props) {
-  const { data: featuredData } = props || {};
+  const { data: featuredData = [] } = props || {};
   const strapi_url = process.env.NEXT_PUBLIC_STRAPI_URL;
 
   return (

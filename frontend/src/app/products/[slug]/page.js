@@ -1,5 +1,6 @@
 'use client'; // Mark this file as a Client Component
 
+import Link from 'next/link';
 import React, { useState, useEffect, use } from 'react';
 
 const strapi_url = process.env.NEXT_PUBLIC_STRAPI_URL;
@@ -61,7 +62,7 @@ export default function ProductPage({ params }) {
             </h1>
             <p
               key={`product-description-${slug}`}
-              dangerouslySetInnerHTML={{ __html: shopifyProduct.body_html || '' }}
+              dangerouslySetInnerHTML={{ __html: shopifyProduct?.body_html || '' }}
             ></p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex">
@@ -98,9 +99,11 @@ export default function ProductPage({ params }) {
               <span className="title-font font-medium text-2xl text-gray-900">
                 Price: {shopifyProduct?.variants[0]?.price}
               </span>
-              <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+              <Link href={`${process.env.NEXT_PUBLIC_SHOPIFY_URL}/cart/${shopifyProduct?.variants[0]?.id}:1`}
+                className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+              >
                 Buy Now
-              </button>
+              </Link>
             </div>
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               CATEGORY: {product?.categories?.[0]?.name}
