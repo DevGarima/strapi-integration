@@ -17,6 +17,7 @@ const NavBar = () => {
           <Link href="/" className="mr-5 hover:text-gray-900">Home</Link>
           <Link href="/articles" className="mr-5 hover:text-gray-900">Articles</Link>
           <Link href="/products" className="mr-5 hover:text-gray-900">Product</Link>
+          <Link href="/contactUs" className="mr-5 hover:text-gray-900">Contact Us</Link>
         </nav>
         </div>
       </header>

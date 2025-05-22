@@ -618,6 +618,57 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLeadFormSubmissionLeadFormSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'lead_form_submissions';
+  info: {
+    description: '';
+    displayName: 'LeadFormSubmission';
+    pluralName: 'lead-form-submissions';
+    singularName: 'lead-form-submission';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    _softDeletedAt: Schema.Attribute.DateTime & Schema.Attribute.Private;
+    _softDeletedById: Schema.Attribute.Integer & Schema.Attribute.Private;
+    _softDeletedByType: Schema.Attribute.String & Schema.Attribute.Private;
+    company: Schema.Attribute.String;
+    consent: Schema.Attribute.Boolean;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'successiveadmin@successive.tech'>;
+    firstName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Test'>;
+    lastName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Test'>;
+    leadStatus: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Open - Not Contacted'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lead-form-submission.lead-form-submission'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    phone: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'9999999999'>;
+    publishedAt: Schema.Attribute.DateTime;
+    salesforceId: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   collectionName: 'orders';
   info: {
@@ -1251,6 +1302,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::header-footer.header-footer': ApiHeaderFooterHeaderFooter;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::lead-form-submission.lead-form-submission': ApiLeadFormSubmissionLeadFormSubmission;
       'api::order.order': ApiOrderOrder;
       'api::product.product': ApiProductProduct;
       'api::restaurant.restaurant': ApiRestaurantRestaurant;

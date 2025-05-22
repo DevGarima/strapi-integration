@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lead_form_submissions",
+  "info": {
+    "singularName": "lead-form-submission",
+    "pluralName": "lead-form-submissions",
+    "displayName": "LeadFormSubmission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "_softDeletedAt": {
+      "type": "datetime",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedById": {
+      "type": "integer",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedByType": {
+      "type": "string",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {},
+      "default": "Test"
+    },
+    "lastName": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {},
+      "default": "Test"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "pluginOptions": {},
+      "default": "successiveadmin@successive.tech"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {},
+      "default": "9999999999"
+    },
+    "company": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "message": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "consent": {
+      "type": "boolean",
+      "pluginOptions": {}
+    },
+    "leadStatus": {
+      "type": "string",
+      "pluginOptions": {},
+      "default": "Open - Not Contacted",
+      "required": true
+    },
+    "salesforceId": {
+      "type": "string"
+    }
+  }
+}
